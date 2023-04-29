@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap");
 body {
-    background: url("../public/assets/bg.png") no-repeat fixed !important;
+    background: url("/public/assets/bg.png") no-repeat fixed !important;
     background-size: cover !important;
 }

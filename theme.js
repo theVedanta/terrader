@@ -15,6 +15,13 @@ const theme = extendTheme({
         heading: `'Chakra Petch', sans-serif`,
         body: `'Chakra Petch', sans-serif`,
     },
+    components: {
+        Button: {
+            defaultProps: {
+                size: "lg",
+            },
+        },
+    },
 });
 
 export default theme;

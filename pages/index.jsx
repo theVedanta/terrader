@@ -13,7 +13,7 @@ const Home = () => {
                 }}
             >
                 <Link href="/dash">
-                    <Button size="lg">Dashboard</Button>
+                    <Button>Dashboard</Button>
                 </Link>
             </Flex>
         </>

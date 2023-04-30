@@ -188,6 +188,7 @@ const Home = ({ authed, setAuthed, setUser }) => {
                                             <InputGroup>
                                                 <Input
                                                     placeholder="p@ssw0rd"
+                                                    type="password"
                                                     onChange={(e) => {
                                                         setPassword(
                                                             e.target.value.trim()
@@ -254,6 +255,7 @@ const Home = ({ authed, setAuthed, setUser }) => {
                                                     )
                                                 }
                                                 required
+                                                type="password"
                                                 placeholder="p@ssw0rd"
                                             />
                                             <InputRightElement>
@@ -274,6 +276,7 @@ const Home = ({ authed, setAuthed, setUser }) => {
                                                     )
                                                 }
                                                 name="password-conf"
+                                                type="password"
                                             />
                                             <InputRightElement>
                                                 <CheckIcon color="green.400" />

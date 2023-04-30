@@ -30,13 +30,8 @@
         "@chakra-ui/icons": "^2.0.19",
         "bcryptjs": "^2.4.3"
     },
-    "type": "commonjs",
     "description": "A game to spread awareness about crypto environmental damages",
-    "main": "db.js",
     "keywords": [],
     "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "nodemon": "^2.0.22"
-    }
+    "license": "MIT"
 }

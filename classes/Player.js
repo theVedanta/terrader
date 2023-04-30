@@ -3,7 +3,17 @@
 
 // Player class
 class Player {
-    constructor(name, id, level, carbon_credits, high_score, carbon_score, power_ups, badges, friends){
+    constructor(
+        name,
+        id,
+        level,
+        carbon_credits,
+        high_score,
+        carbon_score,
+        power_ups,
+        badges,
+        friends
+    ) {
         this.name = name;
         this.id = id;
         this.level = level;
@@ -24,61 +34,60 @@ class Player {
     // power_ups
     // badges
     // friends
-    getName(){
+    getName() {
         return this.name;
     }
-    setName(name){
+    setName(name) {
         this.name = name;
     }
-    getId(){
+    getId() {
         return this.id;
     }
-    setId(id){
+    setId(id) {
         this.id = id;
     }
-    getLevel(){
+    getLevel() {
         return this.level;
     }
-    setLevel(level){
+    setLevel(level) {
         this.level = level;
     }
-    getCarbonCredits(){
+    getCarbonCredits() {
         return this.carbon_credits;
     }
-    setCarbonCredits(carbon_credits){
+    setCarbonCredits(carbon_credits) {
         this.carbon_credits = carbon_credits;
     }
-    getHighScore(){
+    getHighScore() {
         return this.high_score;
     }
-    setHighScore(high_score){
+    setHighScore(high_score) {
         this.high_score = high_score;
     }
-    getCarbonScore(){
+    getCarbonScore() {
         return this.carbon_score;
     }
-    setCarbonScore(carbon_score){
+    setCarbonScore(carbon_score) {
         this.carbon_score = carbon_score;
     }
-    getPowerUps(){
+    getPowerUps() {
         return this.power_ups;
     }
-    setPowerUps(power_ups){
+    setPowerUps(power_ups) {
         this.power_ups = power_ups;
     }
-    getBadges(){
+    getBadges() {
         return this.badges;
     }
-    setBadges(badges){
+    setBadges(badges) {
         this.badges = badges;
     }
-    getFriends(){
+    getFriends() {
         return this.friends;
     }
-    setFriends(friends){
+    setFriends(friends) {
         this.friends = friends;
     }
 
     // Might need more functions but these should suffice for now because Player objects dont have any seeming complexity.
-
 }

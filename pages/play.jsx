@@ -15,37 +15,23 @@ import {
 } from "@chakra-ui/react";
 import { IoCloudyNight, IoLeaf } from "react-icons/io5";
 import Chart from "chart.js/auto";
-import { getRelativePosition } from "chart.js/helpers";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Protect from "@/components/Protect";
+import Graph from "@/components/Graph";
 
 const Play = ({ authed }) => {
+    const [mins, setMins] = useState(5);
+    const [secs, setSecs] = useState(0);
     const news = ["Hello World", "Hello World", "Hello World", "Hello World"];
 
-    useEffect(() => {
-        new Chart(document.getElementById("chart-canvas"), {
-            type: "line",
-            data: {
-                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-                datasets: [
-                    {
-                        label: "# of Votes",
-                        data: [12, 19, 3, 5, 2, 3],
-                        borderWidth: 2,
-                        borderColor: "#1CC880",
-                        backgroundColor: "#1CC880",
-                    },
-                ],
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                    },
-                },
-            },
-        });
-    });
+    setTimeout(() => {
+        if (secs - 1 < 0) {
+            setSecs(60);
+            return setMins(mins - 1);
+        }
+
+        setSecs(secs - 1);
+    }, 1000);
 
     return (
         <Protect authed={authed}>
@@ -77,7 +63,7 @@ const Play = ({ authed }) => {
                     Timer
                 </Heading>
                 <Heading textAlign="center" fontSize={72} mb={10}>
-                    04:01
+                    0{mins}:{secs}
                 </Heading>
 
                 <Flex
@@ -185,9 +171,7 @@ const Play = ({ authed }) => {
                 </Flex>
             </Flex>
 
-            <Box px={20} pt={10} w="74%" h="69vh">
-                <canvas id="chart-canvas"></canvas>
-            </Box>
+            <Graph />
         </Protect>
     );
 };
